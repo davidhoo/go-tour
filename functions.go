@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func add (x int, y int) int {
-    return x + y
+func add(x int, y int) int {
+	return x + y
 }
 
 func main() {
-    fmt.Println(add(12, 43))
+	fmt.Println(add(12, 43))
 }

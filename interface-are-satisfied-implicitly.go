@@ -1,27 +1,27 @@
 package main
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 )
 
 type Reader interface {
-    Read(b []byte) (n int, err error)
+	Read(b []byte) (n int, err error)
 }
 
 type Writer interface {
-    Write(b []byte) (n int, err error)
+	Write(b []byte) (n int, err error)
 }
 
 type ReadWriter interface {
-    Reader
-    Writer
+	Reader
+	Writer
 }
 
 func main() {
-    var w Writer
+	var w Writer
 
-    w = os.Stdout
+	w = os.Stdout
 
-    fmt.Fprintf(w, "hello, world!\n")
+	fmt.Fprintf(w, "hello, world!\n")
 }
